@@ -29,8 +29,8 @@ const domBuilder = {
     // this click inside of each method
     //then create HTML element with terget name  address and resualt type
     outputBuilder(partName, PartDesc, outputType) {
-        let outputResult =
-            `
+        let outputResult = 
+        `
     <div>
     <div>
         <p>${partName}</p>
