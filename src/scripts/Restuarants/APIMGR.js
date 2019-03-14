@@ -8,12 +8,13 @@ const zomatoCall = (searchString) => {
         .then(r => r.json())
         .then(results => {
             const restaurantArray = results.restaurants
-           
+          
             restaurantArray.forEach(restaurant => {
                 let currentR = restaurant.restaurant;
-                displayRestaurants(currentR.name, currentR.location.address)
-                
+             displayRestaurants(currentR.name, currentR.location.address)
+               
             });
+           
         }
         );
 };

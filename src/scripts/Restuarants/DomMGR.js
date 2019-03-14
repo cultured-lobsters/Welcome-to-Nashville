@@ -1,6 +1,8 @@
  console.log("test")
 
  
+
+ 
  const restuarantInputField = document.createElement("Input");
  restuarantInputField.id = "restuarantInput"
  const parksInputField = document.createElement("Input");
@@ -29,3 +31,8 @@
  }
 
  formContainer();
+
+
+
+
+
