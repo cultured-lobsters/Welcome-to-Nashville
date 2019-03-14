@@ -1,12 +1,12 @@
 //containers for input/button pairs.
 const restaurantSearch = document.createElement("div")
-restaurantSearch.id = "restaurantBox"
+restaurantSearch.id = "searchBox"
 const parksSearch = document.createElement("div")
-parksSearch.id = "parksBox"
+parksSearch.id = "searchBox"
 const meetupsSearch = document.createElement("div")
-meetupsSearch.id = "meetupsBox"
+meetupsSearch.id = "searchBox"
 const concertsSearch = document.createElement("div")
-concertsSearch.id = "concertsBox"
+concertsSearch.id = "searchBox"
 
 // user input fields 
 const restuarantInputField = document.createElement("Input");
@@ -18,6 +18,24 @@ const meetupsInputField = document.createElement("Input");
 meetupsInputField.id = "meetupsInput"
 const concertsInputField = document.createElement("Input");
 concertsInputField.id = "concertsInput"
+
+//options for parksInput
+const option1 = document.createElement("option")
+const option2 = document.createElement("option")
+const option3 = document.createElement("option")
+const option4 = document.createElement("option")
+option1.value = "dog"
+option1.innerHTML = "dog"
+option2.value = "dog"
+option2.innerHTML = "dog"
+option3.value = "dog"
+option3.innerHTML = "dog"
+option4.value = "dog"
+option4.innerHTML = "dog"
+parksInputField.appendChild(option1);
+parksInputField.appendChild(option2);
+parksInputField.appendChild(option3);
+parksInputField.appendChild(option4);
 
 //search buttons
 const restaurantButton = document.createElement("button");
@@ -40,7 +58,7 @@ meetupsSearch.appendChild(meetupsInputField);
 meetupsSearch.appendChild(meetupsButton);
 
 //reference to container section
-const section = document.querySelector("#container");
+const section = document.querySelector("#display-container");
 console.log(section);
 
 //document fragment
