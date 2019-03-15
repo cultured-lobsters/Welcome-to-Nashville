@@ -1,7 +1,7 @@
 const eventSearch = (term) => {
     console.log(term);
     //pass input to API lookup
-    ticketmasterLog(term);
+    ticketmasterPost(term);
     //pass returned values to dom manager for posting
 }
 

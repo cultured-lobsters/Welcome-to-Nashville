@@ -83,14 +83,31 @@ section.appendChild(fragment);
 
 ////////////
 
-
+//Returns formatted text based on the inputs.
 const textToHTML = (event, place) => {
     return `
+    <li>
     ${event} at ${place}.
+    </li>
     `
 }
 
-const resultsBox = () => {}
+//reference to DOM element search results are posted to.
+const resultsBox = document.getElementById("display-results");
+//reference to DOM fragment that will be appended to the above element.
+const resultsFragment = document.createDocumentFragment();
+//reference to created list tag element that will be added to the fragment and will have search results appended to it.
+const listTag = document.createElement("UL");
+
+//loops through array of results and appends them to the UL element, after clearing it.
+const postResultstoDom = (resultsArray) => {
+    console.log(resultsArray);
+    listTag.innerHTML = "";
+    for (let i; resultsArray.length; i+= 1){
+        console.log(resultsArray[i]);
+        listTag.innerHTML += resultsArray[i];
+    }
+};
 
 //passes list element to append save button to.
 const saveButton = (elment) => {
