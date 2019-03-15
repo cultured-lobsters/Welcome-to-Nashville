@@ -1,0 +1,12 @@
+#display-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#searchBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 20%;
+    margin-bottom: 6px;
+}

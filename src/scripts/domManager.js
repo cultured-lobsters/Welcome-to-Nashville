@@ -10,13 +10,16 @@ console.log(searchboxes);
 // user input fields 
 const restuarantInputField = document.createElement("Input");
 restuarantInputField.id = "restuarantInput"
+restuarantInputField.placeholder = "Restaurant"
 const parksInputField = document.createElement("Select");
 parksInputField.id = "parksInput"
 parksInputField.name = "parksInput"
 const meetupsInputField = document.createElement("Input");
 meetupsInputField.id = "meetupsInput"
+meetupsInputField.placeholder = "Meetups"
 const concertsInputField = document.createElement("Input");
 concertsInputField.id = "concertsInput"
+concertsInputField.placeholder = "Concerts"
 const InputFields = [];
 InputFields.push(parksInputField, restuarantInputField, meetupsInputField, concertsInputField);
 
@@ -52,6 +55,7 @@ const appendInputsAndButtons = (searchArray, InputArray, ButtonArray) => {
         searchArray[i].appendChild(InputArray[i]);
         searchArray[i].appendChild(ButtonArray[i]);
         ButtonArray[i].innerHTML = "Search";
+        ButtonArray[i].id = "searchButton";
     };
 }
 
