@@ -1,12 +1,11 @@
 //containers for input/button pairs.
-const restaurantSearch = document.createElement("div")
-restaurantSearch.id = "searchBox"
-const parksSearch = document.createElement("div")
-parksSearch.id = "searchBox"
-const meetupsSearch = document.createElement("div")
-meetupsSearch.id = "searchBox"
-const concertsSearch = document.createElement("div")
-concertsSearch.id = "searchBox"
+const restaurant = document.createElement("div")
+const parks = document.createElement("div")
+const meetups = document.createElement("div")
+const concerts = document.createElement("div")
+const searchboxes = []
+searchboxes.push(parks, restaurant, meetups, concerts);
+console.log(searchboxes);
 
 // user input fields 
 const restuarantInputField = document.createElement("Input");
@@ -18,6 +17,8 @@ const meetupsInputField = document.createElement("Input");
 meetupsInputField.id = "meetupsInput"
 const concertsInputField = document.createElement("Input");
 concertsInputField.id = "concertsInput"
+const InputFields = [];
+InputFields.push(parksInputField, restuarantInputField, meetupsInputField, concertsInputField);
 
 //options for parksInput
 const option1 = document.createElement("option")
@@ -42,20 +43,19 @@ const restaurantButton = document.createElement("button");
 const parksButton = document.createElement("button");
 const meetupsButton = document.createElement("button");
 const concertsButton = document.createElement("button");
-concertsButton.innerHTML = "Search"
-restaurantButton.innerHTML = "Search"
-meetupsButton.innerHTML = "Search"
-parksButton.innerHTML = "Search"
+const searchButtons = [];
+searchButtons.push(parksButton, restaurantButton, meetupsButton, concertsButton);
 
 //append search inputs and buttons to appropriate boxes.
-restaurantSearch.appendChild(restuarantInputField);
-restaurantSearch.appendChild(restaurantButton);
-parksSearch.appendChild(parksInputField);
-parksSearch.appendChild(parksButton);
-concertsSearch.appendChild(concertsInputField);
-concertsSearch.appendChild(concertsButton);
-meetupsSearch.appendChild(meetupsInputField);
-meetupsSearch.appendChild(meetupsButton);
+const appendInputsAndButtons = (searchArray, InputArray, ButtonArray) => {
+    for (var i = 0; i < searchArray.length; i += 1 ){
+        searchArray[i].appendChild(InputArray[i]);
+        searchArray[i].appendChild(ButtonArray[i]);
+        ButtonArray[i].innerHTML = "Search";
+    };
+}
+
+appendInputsAndButtons(searchboxes, InputFields, searchButtons);
 
 //reference to container section
 const section = document.querySelector("#display-container");
@@ -65,10 +65,14 @@ console.log(section);
 const fragment = document.createDocumentFragment();
 
 //append container boxes to DOM fragment.
-fragment.appendChild(restaurantSearch);
-fragment.appendChild(concertsSearch);
-fragment.appendChild(meetupsSearch);
-fragment.appendChild(parksSearch);
+const appendFragment = (searchArray) => {
+    searchArray.forEach(searchbox => {
+        searchbox.id = "searchBox"
+        fragment.appendChild(searchbox)
+    })
+}
+
+appendFragment(searchboxes);
 
 //append fragment to the container section container.
 section.appendChild(fragment);
