@@ -34,9 +34,9 @@ option1.innerHTML = "dog_park"
 option2.value = ""
 option2.innerHTML = "basketball_field"
 option3.value = ""
-option3.innerHTML = "dog"
+option3.innerHTML = "park_name"
 option4.value = ""
-option4.innerHTML = "dog"
+option4.innerHTML = "playground"
 parksInputField.appendChild(option1);
 parksInputField.appendChild(option2);
 parksInputField.appendChild(option3);
