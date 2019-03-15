@@ -29,13 +29,13 @@ const option1 = document.createElement("option")
 const option2 = document.createElement("option")
 const option3 = document.createElement("option")
 const option4 = document.createElement("option")
-option1.value = "park_name"
-option1.innerHTML = ""
-option2.value = "dog_park"
-option2.innerHTML = ""
-option3.value = "basketball_field"
-option3.innerHTML = ""
-option4.value = "dog"
+option1.value = ""
+option1.innerHTML = "dog_park"
+option2.value = ""
+option2.innerHTML = "basketball_field"
+option3.value = ""
+option3.innerHTML = "dog"
+option4.value = ""
 option4.innerHTML = "dog"
 parksInputField.appendChild(option1);
 parksInputField.appendChild(option2);

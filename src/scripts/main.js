@@ -1,1 +1,1 @@
-data.getAllParks("playground")
+data.getAllParks("playground","parkname","dog_park", "basketball-field")
