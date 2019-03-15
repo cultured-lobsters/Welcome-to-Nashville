@@ -5,5 +5,6 @@ const getAllPark = (value) => {
         parsedResponse.parkName = park_name
         parsedResponse.parkAddress = mapped_location_address
         .then(response => response(value))
+        //console.log(getAllPark)
     })
 }

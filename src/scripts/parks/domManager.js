@@ -1,7 +1,7 @@
-const displayContainer = document.querySelector("#display-container");
-const searchContainer = document.createElement("search-container");
-parkLsearchContainer.id = "#searchContainer";
-displayContainer.appendChild(searchContainer)
+//  const displayContainer = document.querySelector("#display-container");
+// const searchContainer = document.createElement("search-container");
+// searchContainer.id = "#searchContainer";
+// displayContainer.appendChild(searchContainer)
 //dom builder that hold when the HTML element when the function called
 const domBuilder = {
     //when the page lood , t the funtion is calling in. then the this function would check
