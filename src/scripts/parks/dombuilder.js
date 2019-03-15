@@ -5,7 +5,7 @@ const domBuilder = {
         displayContainer.innerHTML =
             `<h1> Welcome to Nashville</h1>
     <h2>Select input of you like</h2>
-
+    
     <section id="park_search>
     <select id="park-search>
     <option value="basketball_fields">Basketball Field</option>
