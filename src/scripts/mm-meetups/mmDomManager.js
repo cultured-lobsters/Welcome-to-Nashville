@@ -24,4 +24,7 @@
 
 // resultsForm
 
+while (displayInfo.firstChild) {
+    displayInfo.removeChild(displayInfo.firstChild)
+}
 

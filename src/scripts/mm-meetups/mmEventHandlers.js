@@ -14,7 +14,7 @@
 // const searchMeetups = () {
 
 // }
-let displayResults = document.querySelector("#display-container")
+let displayResults = document.querySelector("#displayInfo")
 // let displayResults = document.querySelector("#displayInfo")
 const meetupInfo = (name) => {
     let createMeetup = document.createElement("p")
@@ -24,3 +24,9 @@ displayResults.appendChild(createMeetup)
 
 }
 
+const parksInfo = (park) => {
+    let createPark = document.createElement("p")
+    createPark.textContent = 
+
+displayResults.appendChild(createPark)
+}
